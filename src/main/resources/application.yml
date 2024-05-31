@@ -42,9 +42,9 @@ spring:
     name: PAYMENT-SERVICE
 
   datasource:
-    url: jdbc:mysql://localhost:3306/myroom
-    username: root
-    password: password
+    url: jdbc:mysql://myroomawsdb.c3esb8f8pxjo.us-east-1.rds.amazonaws.com/myroom
+    username: admin
+    password: Devops898
 
   jpa:
     show-sql: true
@@ -52,10 +52,10 @@ spring:
       ddl-auto: update
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: ec2-34-234-196-243.compute-1.amazonaws.com:9092
     advertised:
       host:
-        name: localhost
+        name: 34.234.196.243
 
   main:
     allow-circular-references: true
@@ -65,4 +65,4 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://3.229.47.37:8761/eureka
